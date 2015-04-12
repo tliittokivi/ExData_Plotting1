@@ -9,3 +9,6 @@ with (data, {
     lines(dt, Sub_metering_3, type="l", col="Blue")
 })
 
+# write output file (NOTE! weekdays are locale specific. For generated images they are: to=thu, pe=fri, la=sat)
+dev.copy(png, "plot3.png", height=480, width=480)
+dev.off()
