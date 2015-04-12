@@ -15,6 +15,11 @@ data <- data[ data$Date=="1/2/2007" | data$Date=="2/2/2007" , ]
 # fix data type of Global_active_power column
 data$Global_active_power <- as.numeric(data$Global_active_power)
 
+# fix Sub_metering data types
+data$Sub_metering_1 <- as.numeric(data$Sub_metering_1)
+data$Sub_metering_2 <- as.numeric(data$Sub_metering_2)
+data$Sub_metering_3 <- as.numeric(data$Sub_metering_3)
+
 # create new column "dt" having date+time as string...
 data$dt <- paste(data$Date, data$Time)
 
